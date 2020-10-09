@@ -1,0 +1,26 @@
+<div class="allmessages" style="padding: 30px; max-height: 400px; overflow-y: scroll;">
+    {{#each list}}
+    <!-- Loop thru the list and show each post-->
+    <div class="mymsg">
+        <span class="user">{{this.user.userName}}: </span>
+        {{this.postContent}}
+        <span class="mytime">{{this.postDateTime}}</span>
+    </div>
+    <div class="myspacing">&nbsp;</div>
+    {{else}}
+    <div class="mymsg">
+        No messages
+    </div>
+    {{/each}}
+</div>
+<!-- Interface for current user to post: -->
+<div class="type_msg">
+    <div class="input_msg_write">
+        <form class="form-inline" method="POST" autocomplete="off" id='msgForm'>
+            <input type="hidden" name="username" id="username" value={{username}}>
+            <input type="text" class="write_msg" placeholder="Type a message" name="newmsg" id="newmsg" />
+            <button type=submit class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o"
+                    aria-hidden="true"></i></button>
+        </form>
+    </div>
+</div>

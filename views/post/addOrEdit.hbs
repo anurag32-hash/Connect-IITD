@@ -1,0 +1,16 @@
+<h3>{{viewTitle}}</h3>
+
+<form method="POST" action="/post/upd" autocomplete=off>
+    <input type="hidden" name="_id" id="_id" value="{{post._id}}">
+    <div class="form-group">
+        <label for="postContent">Post: </label>
+        <input type="text" class="form-control" name="postContent" id="postContent" placeholder="Post..." value="{{post.postContent}}">
+        <div class="text-danger">
+            {{post.postContentError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary"><i class="fa fa-database"></i> Submit</button>
+        <a href="/post/list" class="btn btn-secondary"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            :: Connect@IITD ::
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body class="bg-info">
+        <div class="row">
+            <div class="col-md-6 offset-md-3" style="background-color: #fff; margin-top: 25px; padding: 20px;">
+                <div class="form-row">
+                    <div class="col-md-6">
+                        {{# if username }}
+                            <img src="/images/logo1.png" width=30%/>
+                        {{else}}
+                        <a href="/">
+                            <img src="/images/logo1.png" width=30%/>
+                        </a>
+                        {{/if}}
+                    </div>
+                    <div class="col-md-6 pull-right">
+                        {{# if username }}
+                            <span class="pull-right">{{{username}}}&nbsp;<a class="btn btn-danger btn-small pull-right" href="/user/logout">Logout</a></span>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-md-6 offset-md-3" style="background-color: #fff; padding: 20px;">
+                {{{body}}}
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-md-12 text-center">
+            <small>Designed and Developed by: Anurag Singla (2017TT10930)</small> 
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
