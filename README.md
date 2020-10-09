@@ -1,7 +1,3 @@
-# Design Specifications Document
-
-# For
-
 # Connect@IITD
 
 ## Table of Contents
